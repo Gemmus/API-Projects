@@ -18,7 +18,11 @@ if third_question == 0:
     if ask != 'blue':
         print("Right. Off you go.")
     else:
-        print(f'{first_question}: "Blue. No yel-- Auuuuuuuugh!"')
+        is_blue_really = random.randint(0, 1)
+        if is_blue_really == 0:
+            print("Right. Off you go.")
+        else:
+            print(f'{first_question}: "Blue. No yel-- Auuuuuuuugh!"')
 else:
     q, a = riddle_generator()
     ask = input(f'{q}  ').lower()
